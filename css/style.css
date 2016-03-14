@@ -1,0 +1,47 @@
+.centrar{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.glyphicon-search{
+    color: black;
+    font-size: 30px;
+}
+
+.form-group{
+    margin-bottom: 0px;
+}
+
+.cityTemp {
+    margin: 0px auto;
+    border-radius: 5px;
+    background: rgb(190, 193, 197);
+    padding: 20px;/*
+    width: 200px;
+    height: 150px;*/
+    margin-bottom: 5px;
+}
+
+.custom {
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px 3px 0 3px;
+    border: 3px #ccc solid;
+}
+
+.star{
+    padding: 20px;
+}
+
+.glyphicon-star-empty{
+    font-size: 30px;
+    /*
+    color: yellow;
+    border-color: black;
+    */
+}
+.glyphicon-star{
+    font-size: 30px;
+    color: yellow;
+ }

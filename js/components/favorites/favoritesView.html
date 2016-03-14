@@ -1,0 +1,16 @@
+<div id="{{$index}}" ng-repeat="item in data">
+    <div class="row cityTemp">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <label class="control-label col-xs-7 col-sm-6"><h1>{{item.name}}</h1></label>
+            <label class="control-label col-xs-2 col-sm-2"><h2>{{item.country}}</h2></label>
+            <label class="control-label col-xs-2 col-sm-2"><h2>{{item.temp}}</h2></label>
+
+            <div class="control-label star col-xs-1 col-sm-2">
+                        <span class="glyphicon"
+                              ng-class="{'glyphicon-star' : item.favorite, 'glyphicon-star-empty' : !item.favorite}"
+                              ng-click="delFavoriteClick(item.id, $index)"></span>
+            </div>
+        </div>
+    </div>
+</div>

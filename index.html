@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myWeatherApp">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" media="screen">
+
+    <link rel="stylesheet" href="css/style.css" media="screen">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/constants.js"></script>
+
+</head>
+
+
+<body class="container">
+
+    <tabset justified="true">
+        <tab heading="finder" ui-sref="finder" active="false"></tab>
+        <tab heading="favorites" ui-sref="favorites" active="false"></tab>
+    </tabset>
+    <div class="centrar row">
+        <div class="span12">
+            <div class="well" ui-view></div>
+        </div>
+    </div>
+
+</body>
+
+
+<script src="js/components/common/commonFac.js"></script>
+<script src="js/components/common/saveAndDelDataFac.js"></script>
+
+<script src="js/components/finder/finderCtrl.js"></script>
+<script src="js/components/finder/finderFac.js"></script>
+<script src="js/components/favorites/favoritesCtrl.js"></script>
+<script src="js/components/favorites/favoritesFac.js"></script>
+
+</html>

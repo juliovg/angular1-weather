@@ -1,0 +1,42 @@
+<form name="formDetail" ng-submit="OnItemClick()">
+    <div class="row">
+
+        <div class="col-xs-10 col-sm-11 col-md-11 col-lg-11 form-group" id="placeToFind">
+            <div>
+                <input id="placeName"
+                       type="string"
+                       class="form-control"
+                       ng-model="place.name"
+                       placeholder="Search for a place"
+                       required/>
+            </div>
+        </div>
+
+        <div class="form-group" id="findButton">
+            <span class="glyphicon glyphicon-search" aria-hidden="true" ></span>
+        </div>
+
+    </div>
+
+
+    <div id="{{$index}}" ng-repeat="item in data">
+        <div class="row cityTemp">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <label class="control-label col-xs-7 col-sm-6"><h1>{{item.name}}</h1></label>
+                <label class="control-label col-xs-2 col-sm-2"><h2>{{item.country}}</h2></label>
+                <label class="control-label col-xs-2 col-sm-2"><h2>{{item.temp}}</h2></label>
+
+                <div class="control-label star col-xs-1 col-sm-2">
+                        <span class="glyphicon"
+                              ng-class="{'glyphicon-star' : item.favorite, 'glyphicon-star-empty' : !item.favorite}"
+                              ng-click="favoriteClick(item, $index)"></span>
+                    <!--ng-class="{'glyphicon-star' : checked, 'glyphicon-star-empty' : !checked}"-->
+                    <!--ng-class="{'glyphicon-star' : dataSelected == $index, 'glyphicon-star-empty' : dataSelected != $index}"-->
+                    <!--{{dataSelected}} - {{$index}}-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
